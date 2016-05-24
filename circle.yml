@@ -1,0 +1,17 @@
+machine:
+  services:
+    - docker
+
+database:
+  override:
+    - echo "Skipping CircleCI database and using database from docker compose"
+
+dependencies:
+  cache_directories:
+    - "~/docker"
+  override:
+    - docker build -t phantom-bug .
+
+test:
+  override:
+    - docker run -it phantom-bug
