@@ -4,14 +4,12 @@ machine:
 
 database:
   override:
-    - echo "Skipping CircleCI database and using database from docker compose"
+    - echo "No database"
 
 dependencies:
-  cache_directories:
-    - "~/docker"
   override:
-    - docker build -t phantom-bug .
-
+    - docker pull wernight/phantomjs
+    
 test:
   override:
-    - docker run -it phantom-bug
+    - echo "No tests"
