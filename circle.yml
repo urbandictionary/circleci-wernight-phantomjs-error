@@ -6,10 +6,6 @@ database:
   override:
     - echo "No database"
 
-dependencies:
-  override:
-    - docker pull wernight/phantomjs
-    
 test:
   override:
-    - echo "No tests"
+    - docker pull wernight/phantomjs
