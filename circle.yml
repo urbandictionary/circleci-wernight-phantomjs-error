@@ -8,4 +8,4 @@ database:
 
 test:
   override:
-    - docker pull wernight/phantomjs
+    - docker --debug=true pull wernight/phantomjs
