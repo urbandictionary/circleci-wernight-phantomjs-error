@@ -9,4 +9,4 @@ database:
 test:
   override:
     - docker version
-    - docker --debug=true pull wernight/phantomjs
+    - docker --debug=true pull wernight/phantomjs:2.1.1
